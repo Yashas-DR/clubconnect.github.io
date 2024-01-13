@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Club Connect</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap link -->
+    <!-- (font of bootstrap) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <!-- css(home.js) link -->
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/event/event.css">
+  
+
+
+</head>
+
+<body>
+    <!-- header -->
+    <section class="section-a">
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg bg_set">
+    <div class="container-fluid">
+      <a class="navbar-brands" href="index.html">Club Connect</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="event.html">Event</a>
+          </li>
+        </ul>
+        <button class="btn btn-danger px-5 add_style" onclick="join()">JOIN</button>
+        <button class="btn btn-outline-danger px-5 add_style add_style_admin" onclick="adminLogin()">LOGIN</button>
+    </div>
+    </div>
+  </nav>
+</section>
+ 
+<section class="section-b">
+<div class="container-fluid">
+<div class="row search_filter">
+    <div>
+    <input type="text" class="form-control" id="eventBoxFilter" placeholder="Date,Category,Location">
+
+    </div>
+</div>
+
+    <div class="row">
+         <div class="row button_filter text-center my-5">
+             <div style="margin: auto;">
+                   <!-- button filter -->
+              <button  class="btn btn-danger  button_filter_event mt-3" onclick="technical()">Technical Event</button>
+              <button   class="btn btn-danger button_filter_event mt-3" onclick="sport()">Sport Event</button>
+              <button class="btn btn-danger button_filter_event mt-3" onclick="cultural()">Cultural Event</button>
+              <button class="btn btn-danger button_filter_event mt-3" onclick="comingSoon()">Coming Event</button>
+              <button class="btn btn-danger button_filter_event mt-3">More</button>
+             </div>
+            </div>
+       <div class="row event_box tag_filter">
+        <div class="col-md-9" id="increseatsmall">
+            <div class="row justify-content-center" id="eventCard">
+               <!-- fetch data from event.js -->
+               
+              <!-- <div class="col-md-5 text-center g-0 border-outline pb-5">
+                <div class="image_conatiner">
+    <img src="images/home/about_check.jpg" alt="blind_coding">
+    <span id="dateOfEvant">registration open till date <b>12 AM, 2 mar 2023</b></span>
+                </div>
+                <div class="content_event">
+                    <h2>Unstops coder Blind coding</h2>
+    
+                    <span>start on <br> 3 mar 2023 </span>
+                    <span>Entry fee <br> 1000 </span>
+                    <span>Location <br> college campus</span>
+                    <span>Venue <br>Offline </span>
+                    
+    <br>
+    <button class="btn btn-danger mt-3">Registration</button>
+    <button class="btn btn-danger mt-3" onclick="share()">share</button>
+
+                </div>
+               </div> -->
+
+            </div>
+           </div>
+           <!-- <div class="col-md-3" id="noneAtsmall">
+            <div class="bg_set_filter_btn" >
+                <h4 class="mt-2 tagFilter mb-4">Search by tag name </h4>
+            <button class="btn btn-danger filter-block" onclick="a()">Blind Coding</button>
+            <button class="btn btn-danger filter-block" onclick="b()">Hackathon</button>
+            <button class="btn btn-danger filter-block" onclick="c()">Arduino Effect</button>
+            <button class="btn btn-danger filter-block" onclick="d()">Bridge Making</button>
+            <button class="btn btn-danger filter-block" onclick="e()">AutoCad</button>
+            <button class="btn btn-danger filter-block" onclick="f()">Bug Hunting</button>
+            <button class="btn btn-danger filter-block" onclick="g()">cinematography</button>
+            <button class="btn btn-danger filter-block" onclick="h()">Boat Making-Mech</button>
+            <button class="btn btn-danger filter-block" onclick="i()">Competitive Programming</button>
+            <button class="btn btn-danger filter-block" onclick="j()">Free fire</button>
+            <button class="btn btn-danger filter-block" onclick="k()">General Quiz Competition</button>
+            <button class="btn btn-danger filter-block" onclick="l()">Mateys-Aqua bot</button>
+            <button class="btn btn-danger filter-block" onclick="m()">FPhotoGraphy</button>
+            <button class="btn btn-danger filter-block" onclick="n()">Web Development</button>
+            <button class="btn btn-danger filter-block" onclick="o()">Android</button>
+            </div>
+           </div> -->
+       </div>
+
+    </div>
+</div>
+</section>
+    <!-- footer -->
+    <section class="section-f"></section>
+
+
+
+    <!-- bootstrap js link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <!-- script tag -->
+    <script src="js/home.js"></script>
+    <script src="js/event/event.js"></script>
+   
+</body>
+
+</html>
+
+<!-- git init
+git add .
+git commit -m "first commit"
+git push origin main 
+-->

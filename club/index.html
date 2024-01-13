@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Club Connect</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap link -->
+    <!-- (font of bootstrap) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- css(home.js) link -->
+    <link rel="stylesheet" href="css/home.css">
+
+    <link rel="stylesheet" href="css/loginForm/login_form.css">
+    <link rel="stylesheet" href="css/loginForm/registrationForm.css">
+    <link rel="stylesheet" href="css/memberRegister/memberRegister.css">
+
+</head>
+
+<body>
+    <!-- header -->
+    <section class="section-a">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg bg_set">
+            <div class="container-fluid">
+                <a class="navbar-brands" href="index.html">Club Connect</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#1">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="event.html">Event</a>
+                        </li>
+                    </ul>
+                    <button class="btn btn-danger px-5 add_style" onclick="join()">JOIN</button>
+                    <button class="btn btn-outline-danger px-5 add_style add_style_admin" onclick="adminLogin()">LOGIN</button>
+
+                </div>
+            </div>
+        </nav>
+        <!-- header video player -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="video_players">
+                  
+
+                   
+                    <video autoplay muted loop>
+            <source src="video.mp4" />
+          </video>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- about  -->
+    <section id="1" class="section-b">
+        <div class="container">
+            <div class="row heading">
+                <div class="header_container">
+                    <div class="div-left"></div>
+                    <div class="div-center text-center">
+                        <p>ABOUT</p>
+                    </div>
+                    <div class="div-right"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mt-2">
+                    <div class="content_about">
+                        <p>
+                            ClubConnect is a comprehensive online platform designed to serve as the central hub for our club members, 
+                            fostering a sense of community, collaboration, and engagement. This solution integrates essential features
+                             such as event calendars, resource sharing, and interactive forums, providing a seamless experience for members 
+                             to stay informed and actively participate in club activities.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 self_center mt-2">
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active about_image">
+                                <img src="imgg.jpg" class="w-100" alt="...">
+                            </div>
+                            <div class="carousel-item about_image">
+                                <img src="11.jpg" class="w-100" alt="...">
+                            </div>
+                            <div class="carousel-item about_image">
+                                <img src="33.jpg" class="w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden bg-danger">Previous</span>
+            </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- event -->
+    <section class="section-c">
+        <div class="container">
+            <div class="row">
+                <div class="row heading">
+                    <div class="header_container">
+                        <div class="div-left"></div>
+                        <div class="div-center text-center">
+                            <p>EVENT</p>
+                        </div>
+                        <div class="div-right"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row py-5">
+                <div class="col-md-12">
+                    <div class="row" id="homeEvent">
+                        <!-- event name -->
+                        <!-- fetch data from home.js -->
+                        <div class="col-md-4 mt-2">
+                            <div class="event-card text-center">
+                                <h2>Hackathon</h2>
+                                <span>event date: <b>24/01/2024</b></span>
+                                <span>place: <b>college campus</b></span>
+                                <br>
+                                <span>Mode: <b>online</b></span>
+                                <br>
+                                <a href="memberRegister.html">
+                                <button class="btn btn-danger">Registration</button>
+                            </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mt-2">
+                            <div class="event-card text-center">
+                                <h2>Coding event</h2>
+                                <span>event date: <b>18/01/2024</b></span>
+                                <span>place: <b>college campus</b></span>
+                                <br>
+                                <span>Mode: <b>offline</b></span>
+                                <br>
+                                <a href="memberRegister.html">
+                                <button class="btn btn-danger">Registration</button>
+                            </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mt-2">
+                            <div class="event-card text-center">
+                                <h2>Blind Coding</h2>
+                                <span>event date: <b>02/03/2024</b></span>
+                                <span>place: <b>college campus</b></span>
+                                <br>
+                                <span>Mode: <b>offline</b></span>
+                                <br>
+                            <a href="memberRegister.html">
+                                <button class="btn btn-danger">Registration</button>
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-danger more_event" onclick="more()">More Event</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- sponsor -->
+    <section class="section-e">
+        <div class="container">
+            <div class="row">
+                <div class="row heading">
+                    <div class="header_container">
+                        <div class="div-left"></div>
+                        <div class="div-center text-center">
+                            <p>SPONSOR</p>
+                        </div>
+                        <div class="div-right"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row sponser">
+                <div class="col-sm-3">
+                    <div class="conatiner_sponser">
+                        <div class="sponserPic">
+                            <img src="images/home/sponsor/gfg.png" alt="sponserDetails">
+                        </div>
+                        <div class="sponserDetails text-center">
+                            <h5>Geeks For Geeks</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="conatiner_sponser">
+                        <div class="sponserPic">
+                            <img src="images/home/sponsor/SBI-logo.svg" alt="sponserDetails">
+                        </div>
+                        <div class="sponserDetails text-center">
+                            <h5>State Bank of India</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="conatiner_sponser">
+                        <div class="sponserPic">
+                            <img src="images/home/sponsor/uco bank.png" alt="sponserDetails">
+                        </div>
+                        <div class="sponserDetails text-center">
+                            <h5>UCO Bank</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="conatiner_sponser">
+                        <div class="sponserPic">
+                            <img src="images/home/sponsor/honda.png" alt="sponserDetails">
+                        </div>
+                        <div class="sponserDetails text-center">
+                            <h5>Honda</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--feedback -->
+    <section class="section-i">
+        <div class="container">
+            <div class="row">
+                <div class="row heading">
+                    <div class="header_container">
+                        <div class="div-left"></div>
+                        <div class="div-center text-center">
+                            <p>feedback</p>
+                        </div>
+                        <div class="div-right"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- registration form-->
+            <div class="row justify-content-center">
+                <div class="col-8">
+                   
+                    <div class="loginForm">
+                    
+                        
+
+                        <div class="mb-1">
+                            <label for="name" class="form-label">name</label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+
+                        <div class="mb-1">
+                            <label for="college" class="form-label">college</label>
+                            <input type="text" class="form-control" id="college">
+                        </div>
+
+                        <div class="mb-1">
+                            <label for="mobile" class="form-label">Mobile No</label>
+                            <input type="number" class="form-control" id="mobile">
+                        </div>
+
+
+                        <div class="mb-1">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="msg" class="form-label">Example textarea</label>
+                            <textarea class="form-control" id="msg" rows="3"></textarea>
+                          </div>
+
+                        <div class="submit_btn w-0 m-auto">
+                            <button id="feedback" class="btn btn-danger submit_Btn">Submit</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center mt-4">
+                <h5 id="notification"></h5>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- footer -->
+    <center>
+    <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/315de289-6643-4f62-afbf-dd325795ec34"></iframe>
+</center>
+    <section>
+
+
+        <div style="background-color:rgb(246, 242, 242) ;width:101%; height:40px; ">
+            <h3 style="color:black ;font-size:15px; padding:10px;margin-top:10px;  text-align:center;"> Made with 💛 by Enforcers Dept. of ISE, SIET</h3>
+        </div>
+    </section>
+
+   
+
+    <!-- bootstrap js link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- script tag -->
+    <script src="js/home.js"></script>
+    <script src="js/feedback/feedback.js"></script>
+</body>
+
+</html>
+
+<!-- git init
+git add .
+git commit -m "first commit"
+git push origin main 
+-->
